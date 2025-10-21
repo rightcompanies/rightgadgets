@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - RightGadgetsGH</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>RightGadgetsGH</h1>
+            <p>Premium Laptops</p>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-btn active">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="cart-page">
+        <h2 class="section-title">Your Shopping Cart</h2>
+        <div class="cart-container">
+            <div class="cart-items" id="cart-items">
+                <div class="empty-cart">
+                    <h3>Your cart is empty</h3>
+                    <p>Add some premium laptops to get started!</p>
+                    <a href="products.html" class="shop-btn">Shop Now</a>
+                </div>
+            </div>
+            
+            <div class="cart-summary" id="cart-summary" style="display: none;">
+                <h3>Order Summary</h3>
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">GHS0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Shipping:</span>
+                    <span>GHS50.00</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total:</span>
+                    <span id="total">GHS0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="openCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h2>Checkout Details</h2>
+                <button class="close-checkout" onclick="closeCheckout()">×</button>
+            </div>
+            
+            <div class="checkout-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" placeholder="Enter your phone number" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="deliveryAddress">Delivery Address</label>
+                    <textarea id="deliveryAddress" placeholder="Enter your delivery address" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="additionalNotes">Additional Notes (Optional)</label>
+                    <textarea id="additionalNotes" placeholder="Any special instructions or notes" rows="3"></textarea>
+                </div>
+            </div>
+            
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div id="checkout-items"></div>
+                <div class="summary-total">
+                    <span>Total Amount: <span id="checkout-total">GHS0.00</span></span>
+                </div>
+            </div>
+            
+            <div class="checkout-actions">
+                <button class="complete-order-btn" onclick="sendToWhatsApp()">Complete Order</button>
+                <button class="cancel-btn" onclick="closeCheckout()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

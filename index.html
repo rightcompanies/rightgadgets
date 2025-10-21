@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RightGadgetsGH - Premium Laptops</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header/Navigation -->
+        <header>
+            <div class="logo">
+                <h1>RightGadgetsGH</h1>
+                <p>Premium Laptops</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html" class="cart-btn">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Divider Line -->
+        <div class="header-divider"></div>
+
+        <!-- Hero Section -->
+        <main>
+            <div class="hero-content">
+                <h1>Power your productivity<br>with premium laptops</h1>
+            </div>
+            
+            <!-- Product Carousel -->
+            <div class="product-container">
+                <div class="product left">
+                    <img src="images/img2.png" alt="Business Elite Laptop">
+                </div>
+                <div class="product center">
+                    <img src="images/img1.png" alt="Gaming Laptop Pro">
+                </div>
+                <div class="product right">
+                    <img src="images/img3.png" alt="Ultrabook Slim">
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <div class="nav-arrows">
+                    <button class="arrow" id="prev-arrow">‹</button>
+                    <button class="arrow" id="next-arrow">›</button>
+                </div>
+            </div>
+            
+            <!-- Slider Dots -->
+            <div class="slider-dots">
+                <span class="dot"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+            </div>
+        </main>
+    </div>
+
+    <!-- Product Detail Popup -->
+    <div class="product-popup" id="product-popup">
+        <div class="popup-logo">
+            <h1>RightGadgetsGH</h1>
+            <p>Premium Laptops</p>
+        </div>
+        <div class="popup-content">
+            <div class="popup-left">
+                <h1 id="popup-product-name">GAMING LAPTOP PRO</h1>
+                <p class="popup-price" id="popup-price">GHS8,500.00</p>
+                <p class="description" id="popup-description">
+                    Experience ultimate performance with our Gaming Laptop Pro. Featuring high-end graphics, 
+                    lightning-fast processing, and premium build quality. Perfect for gaming, content creation, 
+                    and professional work with exceptional cooling and long-lasting battery life.
+                </p>
+                
+                <div class="specs-section">
+                    <h3>Key Specifications:</h3>
+                    <ul class="specs-list">
+                        <li>Intel Core i7 Processor</li>
+                        <li>16GB RAM / 512GB SSD</li>
+                        <li>NVIDIA RTX Graphics</li>
+                        <li>15.6" Full HD Display</li>
+                        <li>RGB Backlit Keyboard</li>
+                    </ul>
+                </div>
+                
+                <button class="buy-now-btn" onclick="addToCartFromPopup()">Buy Now</button>
+            </div>
+            <div class="popup-right">
+                <div class="laptop-image-container">
+                    <img id="popup-laptop-image" src="images/img1.png" alt="Laptop Image">
+                </div>
+                <div id="3d-container"></div>
+            </div>
+        </div>
+        <button class="close-popup" onclick="closePopup()">×</button>
+    </div>
+</body>
+</html>
