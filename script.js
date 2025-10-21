@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const subtotal = cart.reduce((sum, item) => {
             return sum + parseFloat(item.price.replace('GHS', '').replace(',', ''));
         }, 0);
-        const shipping = 50;
+        const shipping = 0;
         const total = subtotal + shipping;
         checkoutTotal.textContent = `GHS${total.toLocaleString()}.00`;
         
@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const subtotal = cart.reduce((sum, item) => {
             return sum + parseFloat(item.price.replace('GHS', '').replace(',', ''));
         }, 0);
-        const shipping = 50;
+        const shipping = 0;
         const total = subtotal + shipping;
         
         // Create WhatsApp message
@@ -408,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         message += `\n💰 *Order Summary:*\n`;
         message += `Subtotal: GHS${subtotal.toLocaleString()}.00\n`;
-        message += `Shipping: GHS50.00\n`;
+        message += `Shipping: GHS***\n`;
         message += `*Total: GHS${total.toLocaleString()}.00*\n\n`;
         message += `Thank you for choosing RightGadgetsGH! 🚀`;
         
@@ -548,4 +548,5 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(style);
 });
+
 
